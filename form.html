@@ -3,44 +3,94 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="stylesheet" href="https://courtneylanier.github.io/CourtneysCouture/styles.css">
   <title>Registration Form</title>
+  <style>
+    /* General styles for the form */
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #f0f0f0;
+      padding: 20px;
+    }
+
+    form {
+      background-color: white;
+      padding: 20px;
+      border: 1px solid #ddd;
+      border-radius: 5px;
+      width: 300px;
+      margin: 0 auto;
+      box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    }
+
+    input, select, textarea {
+      width: 100%;
+      padding: 8px;
+      margin-bottom: 10px;
+      border: 1px solid #ccc;
+      border-radius: 4px;
+    }
+
+    button {
+      background-color: #4CAF50;
+      color: white;
+      padding: 10px;
+      border: none;
+      border-radius: 4px;
+      cursor: pointer;
+    }
+
+    button:hover {
+      background-color: #45a049;
+    }
+
+    .checkbox-group, .radio-group {
+      display: flex;
+      flex-direction: column;
+      gap: 5px;
+    }
+
+    label {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
+  </style>
 </head>
 <body>
   <h1>Registration Form</h1>
   <form action="/submit" method="post">
     <label for="name">Name:</label>
-    <input type="text" id="name" name="name" placeholder="Your Name" required><br><br>
+    <input type="text" id="name" name="name" placeholder="Your Name" required>
 
     <label for="email">Email:</label>
-    <input type="email" id="email" name="email" placeholder="Your Email" required><br><br>
+    <input type="email" id="email" name="email" placeholder="Your Email" required>
 
     <label for="password">Password:</label>
-    <input type="password" id="password" name="password" required><br><br>
+    <input type="password" id="password" name="password" required>
 
     <label>Gender:</label>
-    <input type="radio" id="male" name="gender" value="male">
-    <label for="male">Male</label>
-    <input type="radio" id="female" name="gender" value="female">
-    <label for="female">Female</label><br><br>
+    <div class="radio-group">
+      <label><input type="radio" id="male" name="gender" value="male"> Male</label>
+      <label><input type="radio" id="female" name="gender" value="female"> Female</label>
+    </div>
 
     <label>Hobbies:</label>
-    <input type="checkbox" id="reading" name="hobbies" value="reading">
-    <label for="reading">Reading</label>
-    <input type="checkbox" id="sports" name="hobbies" value="sports">
-    <label for="sports">Sports</label>
-    <input type="checkbox" id="music" name="hobbies" value="music">
-    <label for="music">Music</label><br><br>
+    <div class="checkbox-group">
+      <label><input type="checkbox" id="reading" name="hobbies" value="reading"> Reading</label>
+      <label><input type="checkbox" id="sports" name="hobbies" value="sports"> Sports</label>
+      <label><input type="checkbox" id="music" name="hobbies" value="music"> Music</label>
+    </div>
 
     <label for="country">Country:</label>
     <select id="country" name="country">
       <option value="usa">United States</option>
       <option value="canada">Canada</option>
       <option value="mexico">Mexico</option>
-    </select><br><br>
+      <option value="switzerland">Switzerland</option>
+    </select>
 
-    <label for="comments">Comments:</label><br>
-    <textarea id="comments" name="comments" rows="4" cols="50"></textarea><br><br>
+    <label for="comments">Comments:</label>
+    <textarea id="comments" name="comments" rows="4" cols="50"></textarea>
 
     <button type="submit">Submit</button>
   </form>
