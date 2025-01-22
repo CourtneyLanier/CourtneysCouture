@@ -19,7 +19,7 @@
       border: 1px solid #ddd;
       border-radius: 5px;
       width: 300px;
-      margin: 0 auto;
+      margin: 6 auto;
       box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
     }
 
@@ -56,14 +56,6 @@
 		align-items: center; /* Center-aligns items vertically */
 		gap: 8px;
 	}
-
-	.radio-group, .checkbox-group {
-		display: flex;
-		flex-direction: column; /* Stacks items vertically */
-		gap: 10px; /* Adds spacing between each item */
-		margin-left: 0; /* Ensures alignment starts from the left */
-	}
-
 	.radio-group label, .checkbox-group label {
 		justify-content: flex-start; /* Ensures content aligns to the left */
 		width: auto; /* Prevents labels from stretching unevenly */
@@ -76,7 +68,7 @@
   </style>
 </head>
 <body>
-  <h1>Registration Form</h1>
+  <h1>Request Your Free Custom AI Tool Here</h1>
   <form action="/submit" method="post">
 	<label for="name">Name:</label>
     <input type="text" id="name" name="name" placeholder="Your Name" required>
@@ -92,7 +84,7 @@
 
 
     <label for="comments">Comments:</label>
-    <textarea id="comments" name="comments" rows="4" cols="50">What would you like this too to do?</textarea>
+    <textarea id="comments" name="comments" placeholder="What would you like this too to do?" rows="4" cols="50"></textarea>
 
     <button type="submit">Submit</button>
   </form>
