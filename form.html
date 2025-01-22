@@ -51,19 +51,28 @@
       margin-left: 20px; /* Indents checkboxes and radio buttons */
     }
 
-    label {
-      display: flex;
-      align-items: left;
-      gap: 8px;
-    }
+	label {
+		display: flex;
+		align-items: center; /* Center-aligns items vertically */
+		gap: 8px;
+	}
 
-    .radio-group label, .checkbox-group label {
-      justify-content: start; /* Aligns labels properly */
-    }
+	.radio-group, .checkbox-group {
+		display: flex;
+		flex-direction: column; /* Stacks items vertically */
+		gap: 10px; /* Adds spacing between each item */
+		margin-left: 0; /* Ensures alignment starts from the left */
+	}
 
-    .radio-group input, .checkbox-group input {
-      margin-right: 8px; /* Adds spacing between input and label */
-    }
+	.radio-group label, .checkbox-group label {
+		justify-content: flex-start; /* Ensures content aligns to the left */
+		width: auto; /* Prevents labels from stretching unevenly */
+	}
+
+	.radio-group input, .checkbox-group input {
+		margin-right: 8px; /* Ensures consistent spacing between inputs and labels */
+	}
+
   </style>
 </head>
 <body>
