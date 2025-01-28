@@ -3,13 +3,11 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="stylesheet" href="https://courtneylanier.github.io/CourtneysCouture/styles.css">
-  <title>Registration Form</title>
+  <title>Free Custom AI Tool Request</title>
   <style>
-    /* General styles for the form */
     body {
       font-family: Arial, sans-serif;
-      background-color: #f0f0f0;
+      background-color: #f8f9fa;
       padding: 20px;
     }
 
@@ -18,15 +16,15 @@
       padding: 20px;
       border: 1px solid #ddd;
       border-radius: 5px;
-      width: 300px;
-      margin: 6 auto;
+      width: 400px;
+      margin: 0 auto;
       box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
     }
 
     input, select, textarea {
       width: 100%;
-      padding: 8px;
-      margin-bottom: 10px;
+      padding: 10px;
+      margin-bottom: 15px;
       border: 1px solid #ccc;
       border-radius: 4px;
     }
@@ -35,7 +33,7 @@
       background-color: #4CAF50;
       color: white;
       padding: 10px;
-      border: 1px;
+      border: none;
       border-radius: 4px;
       cursor: pointer;
     }
@@ -44,49 +42,34 @@
       background-color: #45a049;
     }
 
-    .checkbox-group, .radio-group {
-      display: flex;
-      flex-direction: column;
-      gap: 5px;
-      margin-left: 20px; /* Indents checkboxes and radio buttons */
+    h1 {
+      text-align: center;
+      color: #333;
     }
-
-	label {
-		display: flex;
-		align-items: center; /* Center-aligns items vertically */
-		gap: 8px;
-	}
-	.radio-group label, .checkbox-group label {
-		justify-content: flex-start; /* Ensures content aligns to the left */
-		width: auto; /* Prevents labels from stretching unevenly */
-	}
-
-	.radio-group input, .checkbox-group input {
-		margin-right: 8px; /* Ensures consistent spacing between inputs and labels */
-	}
-
   </style>
 </head>
 <body>
-  <h1>Request Your Free Custom AI Tool Here</h1>
+  <h1>Request a Free Custom AI Tool</h1>
   <form action="/submit" method="post">
-	<label for="name">Name:</label>
-    <input type="text" id="name" name="name" placeholder="Your Name" required>
+    <label for="name">Name:</label>
+    <input type="text" id="name" name="name" placeholder="Your Full Name" required>
 
-    <label for="email">Email:</label>
+    <label for="email">Email Address:</label>
     <input type="email" id="email" name="email" placeholder="Your Email" required>
-	
-	<label for="name">LinkedIn Profile:</label>
-    <input type="text" id="profile" name="profile" placeholder="Your LinkedIn Profile" required>
 
-   <label for="name">Role:</label>
-    <input type="text" id="role" name="role" placeholder="Your Role or Title" required>
+    <label for="company">Company:</label>
+    <input type="text" id="company" name="company" placeholder="Your Company Name" required>
 
+    <label for="role">Role:</label>
+    <input type="text" id="role" name="role" placeholder="Your Role" required>
 
-    <label for="comments">Comments:</label>
-    <textarea id="comments" name="comments" placeholder="What would you like this too to do?" rows="4" cols="50"></textarea>
+    <label for="episode">The Business Automation Podcast Episode Number</label>
+    <input type="number" id="episode" name="episode" placeholder="Episode Number" required>
 
-    <button type="submit">Submit</button>
+    <label for="comments">How would you use this tool? Please share details:</label>
+    <textarea id="comments" name="comments" rows="5" placeholder="Provide as much detail as possible..."></textarea>
+
+    <button type="submit">Submit Request</button>
   </form>
 </body>
 </html>
